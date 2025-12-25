@@ -5,11 +5,10 @@
         <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>TestFramework</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="FIxtures\" />
+      <Folder Include="Utils\" />
     </ItemGroup>
 
     <ItemGroup>
