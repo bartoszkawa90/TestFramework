@@ -173,17 +173,36 @@ public class Database
     /// <summary>
     /// Method to edit person in People table
     /// </summary>
-    public async Task EditPerson(string username, string password)
+    public async Task EditPerson(string username, string newName, string password)
     {
-        Console.WriteLine("Editing user data");
+        Console.WriteLine("Edit data");
         
+        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(newName) || string.IsNullOrEmpty(password))
+        {
+            throw new Exception("No username or password or new name provided");
+        }
+
+        if (await AuthorizeUser(_userName, _userPassword) && _userRole == _roles["admin"])
+        {
+            
+        }
     }
 
     /// <summary>
     /// Method to delete person from People table
     /// </summary>
-    public async Task DeletePerson(string username)
+    public async Task DeletePerson(string username, string password)
     {
+        Console.WriteLine("Delete data");
         
+        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+        {
+            throw new Exception("No username or password provided");
+        }
+
+        if (await AuthorizeUser(_userName, _userPassword) && _userRole == _roles["admin"])
+        {
+            
+        }
     }
 }
