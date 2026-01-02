@@ -1,6 +1,6 @@
 namespace MyKeyVault;
 
-public class RequestHandler
+public class ApiRequestHandler
 {
     
 }
